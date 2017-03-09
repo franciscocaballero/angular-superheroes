@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body ng-controller='heroesCtrl as vm'>
-<input type='text' ngModel='search' placeholder="Search"
-  <script src="app.js"></script>
+<input type='text' ng-model='search' placeholder="Search">
+<button ng-click="vm.addHeroes()">Search</button>
+<div ng-repeat="hereos in vm.heroes">
+<p>{{$index + 1}}. {{heroes.name}}</p>
+</div>
 </body>
 </html>
